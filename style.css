@@ -1,0 +1,291 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	background-color: #6bf3ff4a;
+}
+
+.flex {
+	display: flex;
+	justify-content: center;
+}
+
+main {
+	margin-top: 5%;
+}
+
+main>h1 {
+	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+	font-family: "Honk", system-ui;
+	font-size: 4.5rem;
+	font-weight: 400;
+	font-style: normal;
+	font-variation-settings:
+		"MORF" 15,
+		"SHLN" 50;
+}
+
+
+.social {
+	background-color: transparent;
+	box-shadow: none;
+	position: absolute;
+}
+
+.svg-social {
+	width: 28px;
+	height: 28px;
+}
+
+.jT {
+	width: 23px;
+	height: 23px;
+	transform: rotateY(180deg);
+}
+
+.titulo-vitrine {
+	font-size: 30px;
+}
+
+
+
+
+
+
+.wrapper span {
+	position: fixed;
+	bottom: -80px;
+	animation: animaFundo 10s linear infinite;
+	font-size: 60px;
+	z-index: -1;
+}
+
+.wrapper span:nth-child(1) {
+	left: 60px;
+	animation-delay: 0.6s;
+}
+
+.wrapper span:nth-child(2) {
+	left: 10%;
+	animation-delay: 3s;
+}
+
+.wrapper span:nth-child(3) {
+	left: 20%;
+	animation-delay: 2s;
+}
+
+.wrapper span:nth-child(4) {
+	left: 30%;
+	animation-delay: 5s;
+}
+
+.wrapper span:nth-child(5) {
+	left: 40%;
+	animation-delay: 1s;
+}
+
+.wrapper span:nth-child(6) {
+	left: 50%;
+	animation-delay: 7s;
+}
+
+.wrapper span:nth-child(7) {
+	left: 60%;
+	animation-delay: 6s;
+}
+
+.wrapper span:nth-child(8) {
+	left: 70%;
+	animation-delay: 8s;
+}
+
+.wrapper span:nth-child(9) {
+	left: 80%;
+	animation-delay: 6s;
+}
+
+.wrapper span:nth-child(10) {
+	left: 90%;
+	animation-delay: 4s;
+}
+
+
+
+
+
+
+
+.carousel {
+	height: 600px;
+	perspective: 400px;
+}
+
+.carousel .carousel-item {
+	width: 400px;
+	height: 500px;
+	box-shadow: 0 0 40px #61dafb, 0 0 40px #61dafb, 0 0 40px #61dafb;
+	animation: animate 2s infinite alternate;
+	border-radius: 15px;
+}
+
+
+
+
+
+
+
+.parent {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.child {
+	width: 50px;
+	height: 50px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	transform-style: preserve-3d;
+	transition: all 0.5s ease-in-out;
+	border-radius: 50%;
+	margin: 0 5px;
+}
+
+.child:hover {
+	background-color: white;
+	background-position: -100px 100px, -100px 100px;
+	transform: rotate3d(0.5, 1, 0, 30deg);
+	transform: perspective(180px) rotateX(60deg) translateY(2px);
+	box-shadow: 0px 10px 10px rgb(1, 49, 182);
+}
+
+button {
+	border: none;
+	background-color: transparent;
+	font-size: 2px;
+}
+
+.button:hover {
+	width: inherit;
+	height: inherit;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	transform: translate3d(0px, 0px, 15px) perspective(180px) rotateX(-35deg) translateY(2px);
+	border-radius: 50%;
+}
+
+
+
+.ventilador {
+	display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    height: 60%;
+}
+
+
+
+.fan {
+	width: 100px;
+	height: 100px;
+	border-radius: 50%;
+	background: #319de6;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	animation: spin 1s infinite linear;
+	transform-style: preserve-3d;
+	position: absolute;
+}
+
+.fan:after {
+	content: '';
+	position: absolute;
+	width: 50px;
+	height: 50px;
+	background: #ff7878;
+	border-radius: 50%;
+	border: 15px double blueviolet;
+	box-shadow: 0 2px 20px rgba(0, 0, 0, 0.5);
+}
+
+.blade {
+	position: absolute;
+	width: 100px;
+	height: 50px;
+	background: #99ffbb;
+	border-radius: 50px;
+	transform-origin: 50% 50%;
+	box-shadow: 0 2px 20px rgba(0, 0, 0, 0.5);
+}
+
+.blade:nth-child(1) {
+	transform: rotate(0deg) translate(90px) rotate(0deg);
+}
+
+.blade:nth-child(2) {
+	transform: rotate(120deg) translate(90px) rotate(0deg);
+}
+
+.blade:nth-child(3) {
+	transform: rotate(240deg) translate(90px) rotate(0deg);
+}
+
+input[type="checkbox"] {
+	opacity: 1 !important;
+	pointer-events: visible !important;
+	bottom: 50px;
+	width: 40px;
+	height: 40px;
+}
+
+input[type="checkbox"]+.fan {
+	animation-play-state: running;
+}
+
+input[type="checkbox"]:checked+.fan {
+	animation-play-state: paused;
+}
+
+@keyframes spin {
+	100% {
+		transform: rotate(360deg);
+	}
+}
+
+
+
+
+
+
+
+@keyframes animate {
+	to {
+		box-shadow: 0 0 50px #61dafb, 0 0 50px #61dafb, 0 0 50px #61dafb;
+	}
+}
+
+
+@keyframes animaFundo {
+	0% {
+		transform: translateY(0);
+		opacity: 1
+	}
+
+	70% {
+		opacity: .8;
+	}
+
+	100% {
+		transform: translateY(-800px) rotate(360deg);
+		opacity: 0
+	}
+}
